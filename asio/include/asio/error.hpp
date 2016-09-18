@@ -263,14 +263,14 @@ static const asio::error_category& addrinfo_category
 static const asio::error_category& misc_category
   = asio::error::get_misc_category();
 #else
-static const asio::error_category& system_category
-  = asio::error::get_system_category() __attribute__((unused));
-static const asio::error_category& netdb_category
-  = asio::error::get_netdb_category() __attribute__((unused));
-static const asio::error_category& addrinfo_category
-  = asio::error::get_addrinfo_category() __attribute__((unused));
-static const asio::error_category& misc_category
-  = asio::error::get_misc_category() __attribute__((unused));
+static const __attribute__((unused)) asio::error_category& system_category
+  = asio::error::get_system_category();
+static const __attribute__((unused)) asio::error_category& netdb_category
+  = asio::error::get_netdb_category();
+static const __attribute__((unused)) asio::error_category& addrinfo_category
+  = asio::error::get_addrinfo_category();
+static const __attribute__((unused)) asio::error_category& misc_category
+  = asio::error::get_misc_category();
 #endif // _MSC_VER
 
 } // namespace error
